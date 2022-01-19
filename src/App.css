@@ -1,38 +1,489 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --text-color: #7d7987;
+  --header-color: #233348;
+}
+
+* {
+  font-family: "Mulish", sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  font-weight: 300;
+  font-family: "Mulish", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-color);
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+.pri-btn {
+  height: 40px;
+  width: 109px;
+  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 189, 55, 0.58) 0%,
+    #ffbd37 100%
+  );
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sec-btn {
+  height: 56px;
+  width: 200px;
+  border-radius: 55px;
+  border: 1.4px solid #fcb72b;
+  color: #fcb72b;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.menu-item a,
+.mobile-menu-item a {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.menu-item a:hover,
+.menu-item a.active,
+.mobile-menu-item a:hover,
+.mobile-menu-item a.active {
+  color: #233348;
+  font-weight: 700;
+}
+
+.mobile-menu-item div {
+  margin: 20px 0;
+}
+
+.mobile-nav {
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 0 0 20px;
+  z-index: 100;
+}
+
+/* home hero */
+.home-hero {
+  overflow-x: hidden;
+  /* min-height: 500px; */
+  position: relative;
+}
+
+.hero-content h1 {
+  max-width: 348px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 24px;
+}
+
+.hero-desc {
+  max-width: 418px;
+  font-size: 21px;
+  line-height: 32px;
+  margin-bottom: 50px;
+}
+
+.hero-height {
+  min-height: 500px;
+}
+
+.hero-form {
+  height: 56px;
+  max-width: 430px;
+  border-radius: 100px;
+  border: 1px solid #c2cfe0;
+  display: grid;
+  grid-template-columns: 10% auto 112px;
+  align-items: center;
+}
+
+.hero-form-search-icon {
+  justify-self: center;
+}
+
+.home-hero-input-box {
+  width: 100%;
+  border: none;
+}
+
+.home-hero-input-box:focus {
+  outline: none;
+}
+
+.home-hero-input-box::placeholder {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/* section one */
+.section-one {
+  background-image: url(./assets/images/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  min-height: 700px;
+}
+
+.section-one .react-multi-carousel-list {
+  overflow-x: hidden;
+  min-height: 550px;
+}
+
+.section-one-card {
+  height: 386px;
+  width: 90%;
+  max-width: 382px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 10px 24px 54px 0px #0000000f;
+}
+
+.section-one-card h5 {
+  font-size: 20px;
+  color: var(--header-color);
+  font-weight: 700;
+}
+
+.section-one-card-divider {
+  max-width: 333px;
+  border: 1px solid #c2cfe0;
+  margin-bottom: 20px;
+}
+
+.price-word {
+  font-size: 16px;
+  font-weight: 400px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--header-color);
+}
+
+.section-one-carousel-btn {
+  height: 48px;
+  width: 48px;
+  border-radius: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 189, 55, 0.58) 0%,
+    #ffbd37 100%
+  );
+  display: grid;
+  place-items: center;
+}
+
+.section-one-carousel-btn.disable {
+  background: #ffe8b9;
+}
+
+.section-one-carousel-btn.disable path {
+  fill: #daa53a;
+}
+
+.section-one .carousel-button-group {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 20%;
+  gap: 20px;
+}
+
+/* section two */
+.section-two header {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--header-color);
+  margin-bottom: 50px;
+}
+
+.other-bike-type-wrapper {
+  width: 227px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.other-bike-type-card {
+  height: 117px;
+  width: 227px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 24px 54px 0px #0000000f;
+  margin-bottom: 16px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bike-type {
+  font-size: 16px;
+  color: var(--header-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.other-bike-type-wrapper:hover .other-bike-type-card,
+.other-bike-type-wrapper.active .other-bike-type-card {
+  border: 2px solid #fcb72b;
+  color: #fcb72b;
+}
+.other-bike-type-wrapper:hover .bike-type,
+.other-bike-type-wrapper.active .bike-type {
+  color: #fcb72b;
+}
+
+.section-two .react-multi-carousel-list {
+  min-height: 200px;
+}
+
+.selected-bike-section {
+  background-image: url(./assets/images/Vector1.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.selected-bike-card {
+  height: 386px;
+  max-width: 382px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 10px 24px 54px 0px #0000000f;
+  padding: 0 20px;
+}
+
+.selected-bike-details h3 {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--header-color);
+  margin-bottom: 32px;
+}
+
+.selected-bike-desc {
+  font-size: 18px;
+  font-weight: 300px;
+  margin-bottom: 37px;
+}
+
+.selected-bike-card .price-details {
+  padding: 0 20px;
+}
+
+/* testimonial section */
+
+.testimonial-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  min-height: 425px;
+  max-width: 895px;
+  border-radius: 10px;
+  background: #fcb72b;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-img {
+  height: 133px;
+  width: 133px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.testimonial-card h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700px;
+}
+
+.border-line {
+  height: 2px;
+  width: 56px;
+  border-radius: 6px;
+  background: #fff;
+  margin: auto;
+}
+
+.client-name {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.client-occupation {
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.testimonial-attachment {
+  position: absolute;
+  top: -17%;
+  right: -3%;
+}
+
+.client-testimony {
+  font-size: 19px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.testimonial-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+
+.testimonial-dot.active {
+  background: #ffbe3b;
+}
+
+.testimonial-dot.inactive {
+  opacity: 0.3;
+  background: #ffbe3b;
+}
+
+.testimonial-section .react-multi-carousel-list {
+  min-height: 550px;
+}
+
+.testimonial-section .react-multi-carousel-dot-list {
+  left: -10%;
+  bottom: 15px;
+  gap: 10px;
+}
+
+.testimonial-carousel-btn path {
+  fill: #ffbe3b;
+}
+.testimonial-carousel-btn.disable path {
+  fill: #ffebc4;
+}
+
+.testimonial-section .carousel-button-group {
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  bottom: 10px;
+  left: 25%;
+  gap: 30%;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.testimonial-att-2 {
+  position: absolute;
+  right: 0;
+  bottom: -10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* footer */
+footer {
+  padding: 100px 0;
+  background: #fcb72b;
+}
+
+.f-logo-circle {
+  height: 41px;
+  width: 41px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  color: #ffc44b;
+}
+
+.f-logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-column-one-text {
+  margin: 20px 0;
+  max-width: 391px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.copyright-text {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.footer-column-header {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-link-list a,
+.footer-link-list a:hover {
+  color: #fff;
+}
+
+.footer-link-list li {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 450px) {
+  .selected-bike-card {
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .testimonial-section .react-multi-carousel-dot-list {
+    left: 0;
+    bottom: 0;
+  }
+
+  .testimonial-section .react-multi-carousel-list {
+    min-height: 700px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .custom-container {
+    width: 908px !important;
+    margin: auto !important;
   }
 }
