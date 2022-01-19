@@ -56,12 +56,7 @@ const Testimonial = () => {
   };
 
   const CustomDot = ({ onClick, ...rest }) => {
-    const {
-      onMove,
-      index,
-      active,
-      carouselState: { currentSlide, deviceType },
-    } = rest;
+    const { active } = rest;
     return (
       <button
         className={` testimonial-dot ${active ? "active" : "inactive"}`}
